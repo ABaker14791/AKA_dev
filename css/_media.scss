@@ -1,0 +1,391 @@
+@media screen and (max-width: 770px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	h1 {
+		color: #000;
+		font-size: 1.8rem;
+		line-height: 3rem;
+	}
+
+	h2 {
+		font-size: 4.5;
+	}
+
+	section,
+	.content-area,
+	main {
+		padding: 0px !important;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+	.main-header {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		position: relative;
+
+		&__nav {
+			display: none;
+		}
+
+		&__mobile-nav {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	.main-header__logo svg {
+		max-width: 200px;
+	}
+
+	.main-header__tools {
+		width: auto;
+	}
+
+	.main-header__phone {
+		display: none;
+	}
+
+	.menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		visibility: hidden;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 10rem 0;
+		width: 100vw;
+		font-size: 2rem;
+		color: #787878;
+		background: #fff;
+		// transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+		// clip-path: circle(100px at top left);
+		margin-top: 0;
+
+		.menu-item {
+			opacity: 0;
+			width: 100%;
+			text-align: center;
+
+			a {
+				display: block;
+				padding: 2rem 0;
+			}
+		}
+	}
+
+	.menu-btn:checked ~ * .menu {
+		opacity: 1 !important;
+		clip-path: circle(100% at center);
+		visibility: visible;
+
+		.menu-item {
+			opacity: 1 !important;
+		}
+	}
+
+	.menu-btn:checked ~ .menu-icon {
+		border-radius: 50%;
+		animation-fill-mode: forwards;
+		-webkit-animation-fill-mode: forwards;
+
+		.menu-icon__line {
+			animation-name: openMid;
+			animation-duration: 0.3s;
+			animation-direction: normal;
+			animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+		}
+
+		.menu-icon__line::before {
+			animation-name: openTop;
+			animation-duration: 0.3s;
+			animation-direction: normal;
+			animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+		}
+
+		.menu-icon__line::after {
+			animation-name: openBtm;
+			animation-duration: 0.3s;
+			animation-direction: normal;
+			animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+		}
+	}
+
+	/* Bikes */
+
+	.bikes {
+		padding: 0px;
+		grid-template-columns: 1fr;
+		grid-auto-rows: 300px;
+	}
+
+	.bikes-card--new {
+		max-width: 100vw;
+		display: grid;
+		align-content: center;
+	}
+
+	.bikes-card {
+		margin-bottom: 0px;
+
+		&--used {
+			max-width: 100vw;
+			display: grid;
+			align-content: center;
+			margin: 0 10px 0 10px !important;
+		}
+	}
+
+	.category-tiles {
+		display: grid;
+		grid-template-columns: 1fr !important;
+		box-sizing: border-box !important;
+		margin: 0 !important;
+
+		&__shop {
+			box-sizing: border-box !important;
+			margin: 10px !important;
+		}
+
+		&__sell {
+			box-sizing: border-box !important;
+			margin: 0px 10px 10px 10px !important;
+		}
+
+		&__finance {
+			box-sizing: border-box !important;
+			margin: 0px 10px 10px 10px !important;
+		}
+	}
+
+	/* Products
+ ==========================*/
+
+	.product {
+		margin-top: 0px !important;
+	}
+
+	.new-f1x {
+		width: 100%;
+		margin: 50px auto 50px auto;
+
+		.product {
+			max-width: 500px;
+			margin: auto;
+			border-bottom: 1px solid rgb(202, 202, 202);
+		}
+
+		a {
+			color: #000;
+		}
+
+		a:visited {
+			color: #000;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+		}
+
+		li {
+			.add_to_cart_button {
+				display: none;
+			}
+		}
+	}
+
+	.used-f1x {
+		width: 100%;
+		margin: 50px auto 50px auto;
+
+		.product {
+			max-width: 500px;
+			margin: auto;
+			border-bottom: 1px solid rgb(202, 202, 202);
+		}
+
+		a {
+			color: #000;
+		}
+
+		a:visited {
+			color: #000;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+		}
+
+		li {
+			.add_to_cart_button {
+				display: none;
+			}
+		}
+	}
+
+	.summary {
+		width: calc(100% - 32px) !important;
+		padding: 0px 16px 0px 16px !important;
+	}
+
+	.woocommerce-tabs {
+		width: calc(100% - 32px) !important;
+		padding: 0px 16px 0px 16px !important;
+	}
+
+	.product_title {
+		line-height: 1.6;
+		font-size: 36px;
+	}
+
+	.related.products {
+		width: calc(100% - 32px) !important;
+		padding: 0px 16px 0px 16px !important;
+
+		.add_to_cart_button {
+			display: none;
+		}
+	}
+
+	.woocommerce ul.products li.product {
+		float: none !important;
+		width: auto !important;
+	}
+
+	.woocommerce ul.products li.product {
+		padding: 10px;
+		text-align: center;
+	}
+
+	.woocommerce ul.products {
+		display: grid;
+		justify-items: center;
+		padding: 5px;
+	}
+
+	.vehicle-tiles {
+		padding: 16px;
+
+		li {
+			.add_to_cart_button {
+				display: none;
+			}
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	/* Page Hero */
+
+	.page-hero {
+		margin: -16px -16px 20px -16px !important;
+	}
+
+	/* Mobile contact */
+
+	.wpcf7-form {
+		text-align: left;
+		margin-left: 0 !important;
+		padding: 16px;
+
+		input {
+			border: 1px solid #000;
+			border-radius: 3px;
+			width: 90% !important;
+		}
+	}
+
+	.wp-block-columns {
+		margin: 0px;
+	}
+
+	.contact-heading {
+		margin-left: 0 !important;
+		margin-top: 40px;
+		margin-bottom: 0px;
+		padding: 0px 16px 0px 16px;
+		margin: 0px;
+	}
+
+	.contact-text {
+		margin-left: 0% !important;
+		padding: 0px 16px 0px 16px;
+	}
+
+	.contact-heading-col2 {
+		padding: 0px 16px 0px 16px;
+	}
+
+	.contact-text-col2 {
+		padding: 0px 16px 0px 16px;
+	}
+
+	/* footer */
+
+	.footer {
+		background-color: #333;
+		padding: 0;
+		grid-template-columns: 1fr !important;
+
+		.copyright {
+			order: 3;
+		}
+
+		&-container {
+			padding: 16px !important;
+			text-align: center;
+			font-size: 14px !important;
+
+			&__heading {
+				display: block;
+				color: #fff;
+				margin-bottom: 0.5em !important;
+			}
+
+			&__body {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				a {
+					display: block;
+					padding: 8px 0;
+					color: #fff;
+				}
+			}
+		}
+
+		&-contact {
+			padding: 16px !important;
+			font-size: 14px !important;
+
+			&-heading {
+				display: block;
+				color: #fff;
+				margin-bottom: 0.5em !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/* Hero
+==========================*/
+.hero {
+  position: relative;
+  margin-top: -115px;
+  z-index: -999;
+}
+
+.hero::after {
+  content: "";
+  background-image: url(../img/hero1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero__wrapper {
+  height: 32vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  z-index: -999;
+}
+/*# sourceMappingURL=hero.css.map */
