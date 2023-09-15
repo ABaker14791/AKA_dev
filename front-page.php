@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <a href="https://akaautomotive.co.uk/used-bikes/" class="hero">
+    <a href="https://akaautomotive.co.uk/product-category/used-bikes/" class="hero">
         <div class="hero__wrapper">
             <div class="wrapper">
                 <div class="wrapper__heading">
@@ -13,7 +13,7 @@
     </a>
 
     <div class="bikes">
-        <a href="https://akaautomotive.co.uk/new-bikes/" class="bikes-card bikes-card--new" >
+        <a href="https://akaautomotive.co.uk/product-category/new-bikes/" class="bikes-card bikes-card--new" >
             <h2 class="bikes__heading">New Bikes</h2>
             <!-- <p class="bikes__body"></p> -->
         </a>
@@ -26,7 +26,7 @@
 
     <div class="category-tiles">
         <section class="category-tiles__shop">
-            <a href="https://akaautomotive.co.uk/shop">
+            <a href="https://akaautomotive.co.uk/accessories/">
                 <h3>Shop</h3>
                 <p>View our range of motorcycle clothing and accessories</p>
             </a>
@@ -46,7 +46,6 @@
             </a>
         </section>
 </div>
-
 
 
 

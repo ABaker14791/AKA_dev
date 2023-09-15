@@ -31,6 +31,9 @@
 @media screen and (max-width: 770px) {
   .hero {
     padding: 0px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(../img/IMG_1717.jpeg);
+    background-position-x: 100%;
+    background-size: cover;
   }
 }
 .main-header {
@@ -550,11 +553,6 @@ a:link {
   text-decoration: none;
 }
 
-a:visited,
-a:active {
-  color: #fff;
-}
-
 /* Inputs */
 input {
   border: none;
@@ -572,7 +570,7 @@ section {
 }
 
 .aka-shop-wrapper {
-  padding-top: 100px !important;
+  padding-top: 50px !important;
   width: 90% !important;
   margin: auto !important;
 }
@@ -580,6 +578,7 @@ section {
 .aka-wrapper {
   width: 90% !important;
   margin: auto !important;
+  padding-top: 50px;
 }
 
 .wrapper {
@@ -607,9 +606,25 @@ section {
   border: 2px solid #fff;
 }
 
+.added_to_cart {
+  display: block !important;
+}
+
 /* Products */
 .product {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.product_title {
+  line-height: 1em !important;
+}
+
+.price {
+  color: #000 !important;
+}
+
+.page-content {
+  background-color: #f1f2f2;
 }
 
 .woocommerce ul.products li.product {
@@ -658,9 +673,11 @@ section {
 @media only screen and (min-width: 771px) {
   .woocommerce-price-amount {
     font-size: 20px;
+    color: #000 !important;
   }
   .price {
     font-size: 20px !important;
+    color: #000 !important;
   }
   .vehicle-tiles {
     width: 100%;
@@ -918,6 +935,7 @@ a.button.product_type_simple {
   font-size: 1.6em;
 }
 .category-tiles__shop a {
+  color: #fff !important;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -926,7 +944,7 @@ a.button.product_type_simple {
   text-align: center;
 }
 .category-tiles__shop a:visited {
-  color: #fff;
+  color: #fff !important;
 }
 .category-tiles__sell {
   min-height: 300px;
@@ -1096,8 +1114,7 @@ a.button.product_type_simple {
   margin-top: 30px;
 }
 
-/* Contact page
- ==========================*/
+/* Contact page */
 .wpcf7-form {
   text-align: left;
   margin-left: 20%;
@@ -1131,4 +1148,67 @@ a.button.product_type_simple {
 .contact-text-col2 {
   margin-left: 0px;
   padding-top: 0px;
+}
+
+/* Accessory Category Page */
+.accessory-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 770px) {
+  .accessory-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  .accessory-categories {
+    grid-template-columns: 1fr;
+  }
+}
+.accessory-category-tile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.accessory-category__balance {
+  background: url(../img/balancebike876234.jpeg);
+  height: 250px;
+  background-size: cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.accessory-category__helmets {
+  background: url(../img/helmets123743.jpeg);
+  height: 250px;
+  background-size: cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.accessory-category__gloves {
+  background: url(../img/gloves3271.jpeg);
+  height: 250px;
+  background-size: cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.accessory-category__cleaning {
+  background: url(../img/cleaning123123.jpg);
+  height: 250px;
+  background-size: cover;
+  background-position-y: 50%;
+  background-position-x: 50%;
+}
+
+.accessory-category-text {
+  color: #4e4e4e;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
 }/*# sourceMappingURL=style.css.map */

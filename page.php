@@ -1,17 +1,13 @@
 
 <?php get_header(); ?>
-<main>
+<main class="page-content">
 
     <?php 
         if(have_posts()) {
             while(have_posts()) : the_post();
     ?>
 
-            <div class="page-hero" style="background-image:url( '<?php the_post_thumbnail_url('large'); ?>' )">
 
-            <h1 class="page-hero__heading"> <?php the_title(); ?> </h1>
-
-            </div>
 
             <div class="aka-wrapper">
 
